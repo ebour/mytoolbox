@@ -1,5 +1,9 @@
 # mytoolbox-gatling
 
+This is my small wrapper to use gatling[http://gatling.io/] from maven.
+
+
+
 * usage
 
 `mvn clean gatling:execute 
