@@ -25,9 +25,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<gatling.version>2.0.0-M3</gatling.version>
+		<gatling.version>2.1.6</gatling.version>
 		<joda-time.version>2.3</joda-time.version>
-        <freemarker.version>2.3.19</freemarker.version>
+        	<freemarker.version>2.3.19</freemarker.version>
 	</properties>
 
 	<dependencies>
