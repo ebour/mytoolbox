@@ -1,5 +1,6 @@
 package workload.scenarios
 
+import scala.language.reflectiveCalls
 
 /**
  * Created by ebour.

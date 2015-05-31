@@ -1,5 +1,6 @@
 package workload.rampups
 
+import scala.language.reflectiveCalls
 
 /**
  * Created by ebour.
@@ -10,10 +11,10 @@ class DynamicRampup {
   println("Instanciating rampup: "+rampupClassName)
   
   val rampupClass = Class.forName(rampupClassName)
-  val rampup      = rampupClass.newInstance.asInstanceOf[{ def getRampup: io.gatling.core.scenario.InjectionStep; def getDescription: String }]
+  val rampup      = rampupClass.newInstance.asInstanceOf[{ def getRampup: io.gatling.core.controller.inject.InjectionStep; def getDescription: String }]
   println("Instanciating rampup: "+rampupClassName+" [DONE]")
   
-  def getRampup: io.gatling.core.scenario.InjectionStep = {
+  def getRampup: io.gatling.core.controller.inject.InjectionStep = {
     rampup.getRampup
   }
 

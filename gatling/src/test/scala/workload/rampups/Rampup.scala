@@ -12,8 +12,8 @@ class Rampup {
     "null"
   }
 
-  def getRampup: io.gatling.core.scenario.InjectionStep = {
-    atOnce(0 users)
+  def getRampup: io.gatling.core.controller.inject.InjectionStep = {
+    atOnceUsers(0)
   }
 
 }

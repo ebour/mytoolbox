@@ -11,8 +11,8 @@ class HeavisideRampup extends workload.rampups.Rampup {
   val userCount = System.getProperty("userCount", "1").toInt
   val sDuration = System.getProperty("sDuration", "60").toInt
 
-  override def getRampup: io.gatling.core.scenario.InjectionStep = {
-    heaviside(userCount users) over (sDuration seconds)
+  override def getRampup: io.gatling.core.controller.inject.InjectionStep = {
+    heavisideUsers(userCount) over (sDuration seconds)
   }
 
   override def getDescription: String = {
